@@ -234,4 +234,3 @@ TEST(Converter, test_CheckInput_input_invalid_string_all) {
 
     EXPECT_EQ(-1, con.CheckInput("AFAF"));
 }
-    

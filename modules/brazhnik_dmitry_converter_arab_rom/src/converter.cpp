@@ -63,8 +63,8 @@ void Converter::OutputConsole() {
 
 int Converter::CheckInput(std::string inText) {
     int codeOut = -1;
-    
-    for (int i = 0; i < static_cast<int>(inText.size()); i++) {  
+
+    for (int i = 0; i < static_cast<int>(inText.size()); i++) {
         if (inText[i] >= 48 && inText[i] <= 57) {
             if (codeOut == 1) {
                 return -1;
