@@ -234,3 +234,13 @@ TEST(Converter, test_CheckInput_input_invalid_string_all) {
 
     EXPECT_EQ(-1, con.CheckInput("AFAF"));
 }
+
+TEST(Converter, test_print_to_console) {
+    Converter con("XXXVII");
+    EXPECT_NO_THROW(con.printToConsole());
+}
+
+TEST(Converter, test_check_input) {
+    Converter con("XXXVII");
+    EXPECT_EQ(-1, con.CheckInput("XA"));
+}
