@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Brazhnik Dmitry
+﻿  // Copyright 2022 Brazhnik Dmitry
 
 #include "include/converter.h"
 
