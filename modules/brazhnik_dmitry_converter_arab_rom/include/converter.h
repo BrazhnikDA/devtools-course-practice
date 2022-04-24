@@ -19,14 +19,43 @@ struct arabien {
 };
 
 class Converter {
-
 public:
     Converter() {
         R.val = "";
         A.val = 0;
-    };
-    Converter(std::string R_);
-    Converter(int A_);
+    }
+    Converter(std::string R_) {
+        int num = 0;
+        switch (CheckInput(R_)) {
+        case 1:
+            R.val = R_;
+            A = ConvertRomToArab(R);
+            R = ConvertArabToRom(A);
+            break;
+        case 0:
+            num = atoi(R_.c_str());
+            if (num < 0 || num > 3999) {
+                throw std::out_of_range("Input error: The number is out of bounds");
+            }
+            A.val = num;
+            R = ConvertArabToRom(A);
+            break;
+        case -1:
+            throw std::logic_error("Logic error: Invalid data.");
+            break;
+        default:
+            throw std::logic_error("Logic error: Invalid data.");
+            break;
+        };
+    }
+    Converter(int A_) {
+        if (A_ < 0 || A_ > 3999) {
+            throw std::out_of_range("Input error: The number is out of bounds");
+        }
+        A.val = A_;
+        R = ConvertArabToRom(A);
+    }
+
     arabien ConvertRomToArab(roman R_);
     roman ConvertArabToRom(arabien A_);
     void OutputConsole();
