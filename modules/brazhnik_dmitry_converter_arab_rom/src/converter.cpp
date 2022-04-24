@@ -57,7 +57,7 @@ roman Converter::ConvertArabToRom(arabien A_) {
     return res;
 }
 
-void Converter::OutputConsole() {
+void Converter::printToConsole() {
     std::cout << "Roman - " << R.val << " Arab - " << A.val << "\n";
 }
 

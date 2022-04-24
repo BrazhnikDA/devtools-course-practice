@@ -35,7 +35,7 @@ class Converter {
         case 0:
             num = atoi(R_.c_str());
             if (num < 0 || num > 3999) {
-                throw std::out_of_range("number out of bounds");
+                throw std::out_of_range("Number out of bounds");
             }
             A.val = num;
             R = ConvertArabToRom(A);
@@ -58,7 +58,7 @@ class Converter {
 
     arabien ConvertRomToArab(roman R_);
     roman ConvertArabToRom(arabien A_);
-    void OutputConsole();
+    void printToConsole();
     int CheckInput(std::string inText);
     std::string Get_R_Val();
     int Get_A_Val();
