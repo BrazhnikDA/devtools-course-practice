@@ -36,9 +36,6 @@ public:
 	std::string Get_R_Val();
 	int			Get_A_Val();
 
-	friend std::ostream& operator<< (std::ostream& out, const Converter& converter);
-	friend std::istream& operator>> (std::istream& in, Converter& converter);
-
 private:
 	roman	R;
 	arabien A;

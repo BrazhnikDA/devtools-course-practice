@@ -114,40 +114,6 @@ roman Converter::ConvertArabToRom(arabien A_)
 	return res;
 }
 
-std::ostream& operator<<(std::ostream& out, const Converter& converter)
-{
-	out << "Roman - " << converter.R.val << " Arab - " << converter.A.val << "\n";
-	return out;
-}
-
-std::istream& operator>>(std::istream& in, Converter& converter)
-{
-	std::string inText = "";
-	std::cout << "Input number: ";
-	in >> inText;
-
-	switch (converter.CheckInput(inText))
-	{
-	case 0:
-		converter.A.val = atoi(inText.c_str());
-	 	converter.R = converter.ConvertArabToRom(converter.A);
-		break;
-	case 1:
-		converter.R.val = inText;
-		converter.A = converter.ConvertRomToArab(converter.R);
-		converter.R = converter.ConvertArabToRom(converter.A);
-		break;
-	case -1:
-		throw std::logic_error("Logic error: Invalid data.");
-		break;
-
-	default:
-		break;
-	}
-
-	return in;
-}
-
 void Converter::OutputConsole()
 {
 	std::cout << "Roman - " << R.val << " Arab - " << A.val << "\n";
