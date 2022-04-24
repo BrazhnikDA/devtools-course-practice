@@ -1,10 +1,8 @@
 ﻿// Copyright 2022 Brazhnik Dmitry
 
 #include <gtest/gtest.h>
-
 #include <algorithm>
 #include <utility>
-
 #include "include/converter.h"
 
 Converter::Converter() {
@@ -47,14 +45,11 @@ Converter::Converter(int A_) {
 
 arabien Converter::ConvertRomToArab(roman R_) {
     int Sum = 0;
-
     int sizeText = R_.val.size();
     std::string inText = R_.val;
-
     int const arab_[] = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
     char const* roman_[] = { "M",  "CM", "D",  "CD", "C",  "XC", "L",
                             "XL", "X",  "IX", "V",  "IV", "I" };
-
     arabien res;
     res.val = 0;
 
@@ -75,9 +70,7 @@ arabien Converter::ConvertRomToArab(roman R_) {
             }
         }
     }
-
     res.val = Sum;
-
     return res;
 }
 
@@ -97,7 +90,6 @@ roman Converter::ConvertArabToRom(arabien A_) {
             res.val += roman_char_list[i];
         }
     }
-
     return res;
 }
 

@@ -1,10 +1,11 @@
 ﻿// Copyright 2022 Brazhnik Dmitry
 
 #include <gtest/gtest.h>
-
 #include "include/converter.h"
 
-TEST(Converter, can_create_Converter) { EXPECT_NO_THROW(Converter con); }
+TEST(Converter, can_create_Converter) { 
+	EXPECT_NO_THROW(Converter con); 
+}
 
 TEST(Converter, can_create_Converter_with_roman) {
 	EXPECT_NO_THROW(Converter con("VII"));

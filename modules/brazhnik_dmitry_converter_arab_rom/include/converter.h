@@ -11,31 +11,27 @@
 #include <string>
 
 struct roman {
-	std::string val;
+    std::string val;
 };
 
 struct arabien {
-	int val;
+    int val;
 };
 
 class Converter {
 public:
-	Converter();
-	Converter(std::string R_);
-	Converter(int A_);
-
-	arabien ConvertRomToArab(roman R_);
-	roman ConvertArabToRom(arabien A_);
-
-	void OutputConsole();
-	int CheckInput(std::string inText);
-
-	std::string Get_R_Val();
-	int Get_A_Val();
-
+    Converter();
+    Converter(std::string R_);
+    Converter(int A_);
+    arabien ConvertRomToArab(roman R_);
+    roman ConvertArabToRom(arabien A_);
+    void OutputConsole();
+    int CheckInput(std::string inText);
+    std::string Get_R_Val();
+    int Get_A_Val();
 private:
-	roman R;
-	arabien A;
+    roman R;
+    arabien A;
 };
 
 #endif  // MODULES_BRAZHNIK_DMITRY_CONVERTER_ARAB_ROM_INCLUDE_CONVERTER_H_
