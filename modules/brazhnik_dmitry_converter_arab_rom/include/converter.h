@@ -7,37 +7,34 @@
 #define countof(array) (sizeof(array) / sizeof((array)[0]))
 #endif
 
-#include <string>
 #include <iostream>
+#include <string>
 
-struct roman
-{
+struct roman {
 	std::string val;
 };
 
-struct arabien
-{
+struct arabien {
 	int val;
 };
 
-class Converter
-{
+class Converter {
 public:
 	Converter();
 	Converter(std::string R_);
 	Converter(int A_);
 
 	arabien ConvertRomToArab(roman R_);
-	roman	ConvertArabToRom(arabien A_);
+	roman ConvertArabToRom(arabien A_);
 
 	void OutputConsole();
 	int CheckInput(std::string inText);
 
 	std::string Get_R_Val();
-	int			Get_A_Val();
+	int Get_A_Val();
 
 private:
-	roman	R;
+	roman R;
 	arabien A;
 };
 
