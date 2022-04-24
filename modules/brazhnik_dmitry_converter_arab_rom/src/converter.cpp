@@ -1,10 +1,11 @@
-﻿// Copyright 2022 Brazhnik Dmitry
+﻿//  Copyright 2022 Brazhnik Dmitry
 
 #include "include/converter.h"
 
 #include <gtest/gtest.h>
 #include <algorithm>
 #include <utility>
+#include <string>
 
 arabien Converter::ConvertRomToArab(roman R_) {
     int Sum = 0;
