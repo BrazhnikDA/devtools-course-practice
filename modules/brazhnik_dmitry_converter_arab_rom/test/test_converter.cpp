@@ -5,7 +5,7 @@
 #include "include/converter.h"
 
 TEST(Converter, can_create_Converter) {
-    EXPECT_NO_THROW(Converter con); 
+    EXPECT_NO_THROW(Converter con);
 }
 
 TEST(Converter, can_create_Converter_with_roman) {
