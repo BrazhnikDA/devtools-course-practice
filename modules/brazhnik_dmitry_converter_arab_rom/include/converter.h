@@ -8,7 +8,7 @@
 #endif
 
 #include <iostream>
-#include <string>
+#include <string> // NOLINT
 
 struct roman {
     std::string val;
@@ -19,12 +19,12 @@ struct arabien {
 };
 
 class Converter {
- public: 
+ public:
     Converter() {
         R.val = "";
         A.val = 0;
     }
-    Converter(std::string R_) {
+    explicit Converter(std::string R_) {
         int num = 0;
         switch (CheckInput(R_)) {
         case 1:
@@ -48,7 +48,7 @@ class Converter {
             break;
         }
     }
-    Converter(int A_) {
+    explicit Converter(int A_) {
         if (A_ < 0 || A_ > 3999) {
             throw std::out_of_range("Input error: The number is out of bounds");
         }
@@ -63,7 +63,7 @@ class Converter {
     std::string Get_R_Val();
     int Get_A_Val();
 
- private: 
+ private:
     roman R;
     arabien A;
 };
