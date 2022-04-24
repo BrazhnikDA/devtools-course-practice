@@ -1,7 +1,6 @@
 ﻿  // Copyright 2022 Brazhnik Dmitry
 
 #include <gtest/gtest.h>
-
 #include "include/converter.h"
 
 TEST(Converter, can_create_Converter) {
@@ -235,3 +234,4 @@ TEST(Converter, test_CheckInput_input_invalid_string_all) {
 
     EXPECT_EQ(-1, con.CheckInput("AFAF"));
 }
+    

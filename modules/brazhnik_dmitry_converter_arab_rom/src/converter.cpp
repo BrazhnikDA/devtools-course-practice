@@ -19,7 +19,7 @@ arabien Converter::ConvertRomToArab(roman R_) {
     res.val = 0;
 
     for (int i = 0; i < sizeText; i++) {
-        for (int j = 0; j < countof(roman_); j++) {
+        for (size_t j = 0; j < countof(roman_); j++) {
             if (inText[i] == roman_[j][0]) {
                 if ((inText[i + 1] == roman_[j][1]) && (i != sizeText - 1)) {
                     Sum += arab_[j];
@@ -48,7 +48,7 @@ roman Converter::ConvertArabToRom(arabien A_) {
     std::string roman_char_list[] = { "M",  "CM", "D",  "CD", "C",  "XC", "L",
                                      "XL", "X",  "IX", "V",  "IV", "I" };
 
-    for (int i = 0; i < countof(roman_value_list); i++) {
+    for (size_t i = 0; i < countof(roman_value_list); i++) {
         while (num >= roman_value_list[i]) {
             num -= roman_value_list[i];
             res.val += roman_char_list[i];
@@ -63,17 +63,17 @@ void Converter::OutputConsole() {
 
 int Converter::CheckInput(std::string inText) {
     int codeOut = -1;
-
-    for each(int symCode in inText) {
-        if (symCode >= 48 && symCode <= 57) {
+    
+    for (int i = 0; i < static_cast<int>(inText.size()); i++) {  
+        if (inText[i] >= 48 && inText[i] <= 57) {
             if (codeOut == 1) {
                 return -1;
             }
             codeOut = 0;
         } else {
-            if (symCode == 73 || symCode == 86 || symCode == 88 ||
-                symCode == 76 || symCode == 67 || symCode == 68 ||
-                symCode == 77) {
+            if (inText[i] == 73 || inText[i] == 86 || inText[i] == 88 ||
+                inText[i] == 76 || inText[i] == 67 || inText[i] == 68 ||
+                inText[i] == 77) {
                 if (codeOut == 0) {
                     return -1;
                 }
