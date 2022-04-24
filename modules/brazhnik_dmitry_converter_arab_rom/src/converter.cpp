@@ -1,4 +1,4 @@
-﻿// Copyright 2022 Kuklin Andrey
+﻿// Copyright 2022 Brazhnik Dmitry
 
 #include <gtest/gtest.h>
 #include <algorithm>
