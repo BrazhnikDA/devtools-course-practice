@@ -66,17 +66,11 @@ int Converter::CheckInput(std::string inText) {
 
     for (int i = 0; i < static_cast<int>(inText.size()); i++) {
         if (inText[i] >= 48 && inText[i] <= 57) {
-            if (codeOut == 1) {
-                return -1;
-            }
             codeOut = 0;
         } else {
             if (inText[i] == 73 || inText[i] == 86 || inText[i] == 88 ||
                 inText[i] == 76 || inText[i] == 67 || inText[i] == 68 ||
                 inText[i] == 77) {
-                if (codeOut == 0) {
-                    return -1;
-                }
                 codeOut = 1;
             } else {
                 return -1;
