@@ -19,7 +19,7 @@ struct arabien {
 };
 
 class Converter {
-public:
+ public: 
     Converter() {
         R.val = "";
         A.val = 0;
@@ -35,7 +35,7 @@ public:
         case 0:
             num = atoi(R_.c_str());
             if (num < 0 || num > 3999) {
-                throw std::out_of_range("Input error: The number is out of bounds");
+                throw std::out_of_range("number out of bounds");
             }
             A.val = num;
             R = ConvertArabToRom(A);
@@ -46,7 +46,7 @@ public:
         default:
             throw std::logic_error("Logic error: Invalid data.");
             break;
-        };
+        }
     }
     Converter(int A_) {
         if (A_ < 0 || A_ > 3999) {
@@ -63,7 +63,7 @@ public:
     std::string Get_R_Val();
     int Get_A_Val();
 
-private:
+ private: 
     roman R;
     arabien A;
 };

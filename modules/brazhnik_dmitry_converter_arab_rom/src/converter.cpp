@@ -1,47 +1,10 @@
 ﻿// Copyright 2022 Brazhnik Dmitry
 
+#include "include/converter.h"
+
 #include <gtest/gtest.h>
 #include <algorithm>
 #include <utility>
-#include "include/converter.h"
-
-Converter::Converter() {
-    R.val = "";
-    A.val = 0;
-}
-
-Converter::Converter(std::string R_) {
-    int num = 0;
-    switch (CheckInput(R_)) {
-    case 1:
-        R.val = R_;
-        A = ConvertRomToArab(R);
-        R = ConvertArabToRom(A);
-        break;
-    case 0:
-        num = atoi(R_.c_str());
-        if (num < 0 || num > 3999) {
-            throw std::out_of_range("Input error: The number is out of bounds");
-        }
-        A.val = num;
-        R = ConvertArabToRom(A);
-        break;
-    case -1:
-        throw std::logic_error("Logic error: Invalid data.");
-        break;
-    default:
-        throw std::logic_error("Logic error: Invalid data.");
-        break;
-    }
-}
-
-Converter::Converter(int A_) {
-    if (A_ < 0 || A_ > 3999) {
-        throw std::out_of_range("Input error: The number is out of bounds");
-    }
-    A.val = A_;
-    R = ConvertArabToRom(A);
-}
 
 arabien Converter::ConvertRomToArab(roman R_) {
     int Sum = 0;
@@ -100,8 +63,7 @@ void Converter::OutputConsole() {
 int Converter::CheckInput(std::string inText) {
     int codeOut = -1;
 
-    for
-        each(int symCode in inText) {
+    for each(int symCode in inText) {
         if (symCode >= 48 && symCode <= 57) {
             if (codeOut == 1) {
                 return -1;
