@@ -19,8 +19,12 @@ struct arabien {
 };
 
 class Converter {
+
 public:
-    Converter();
+    Converter() {
+        R.val = "";
+        A.val = 0;
+    };
     Converter(std::string R_);
     Converter(int A_);
     arabien ConvertRomToArab(roman R_);
@@ -29,6 +33,7 @@ public:
     int CheckInput(std::string inText);
     std::string Get_R_Val();
     int Get_A_Val();
+
 private:
     roman R;
     arabien A;

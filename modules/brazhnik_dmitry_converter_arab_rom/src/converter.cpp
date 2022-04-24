@@ -47,7 +47,8 @@ arabien Converter::ConvertRomToArab(roman R_) {
     int Sum = 0;
     int sizeText = R_.val.size();
     std::string inText = R_.val;
-    int const arab_[] = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+    int const arab_[] = { 1000, 900, 500, 400, 100, 90, 
+        50, 40, 10, 9, 5, 4, 1 };
     char const* roman_[] = { "M",  "CM", "D",  "CD", "C",  "XC", "L",
                             "XL", "X",  "IX", "V",  "IV", "I" };
     arabien res;
@@ -60,8 +61,7 @@ arabien Converter::ConvertRomToArab(roman R_) {
                     Sum += arab_[j];
                     i++;
                     break;
-                }
-                else {
+                } else {
                     if ((j % 2 == 0) || j == 12) {
                         Sum += arab_[j];
                         break;
@@ -109,8 +109,7 @@ int Converter::CheckInput(std::string inText) {
                 return -1;
             }
             codeOut = 0;
-        }
-        else {
+        } else {
             // I V X L C D M
             if (symCode == 73 || symCode == 86 || symCode == 88 ||
                 symCode == 76 || symCode == 67 || symCode == 68 ||
@@ -119,8 +118,7 @@ int Converter::CheckInput(std::string inText) {
                     return -1;
                 }
                 codeOut = 1;
-            }
-            else {
+            } else {
                 return -1;
             }
         }
@@ -128,6 +126,10 @@ int Converter::CheckInput(std::string inText) {
     return codeOut;
 }
 
-std::string Converter::Get_R_Val() { return R.val; }
+std::string Converter::Get_R_Val() { 
+    return R.val; 
+}
 
-int Converter::Get_A_Val() { return A.val; }
+int Converter::Get_A_Val() { 
+    return A.val; 
+}
