@@ -1,4 +1,5 @@
 // Copyright 2022 Shatalin Dmitrii
+
 #include <vector>
 #include "include/deposit_calculator.h"
 
