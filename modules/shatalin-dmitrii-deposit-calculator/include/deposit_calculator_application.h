@@ -8,12 +8,11 @@
 #include "include/deposit_calculator.h"
 
 class Application {
-private: 
+ private:
     std::string getHelp(const std::string& appname);
     bool checkArgument(const std::string& str);
     int parseArgument(const char* arg);
-
-public: 
+ public:
     std::string operator()(int argc, const char** argv);
 };
 
