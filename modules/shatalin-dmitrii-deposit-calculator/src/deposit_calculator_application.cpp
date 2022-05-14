@@ -1,10 +1,8 @@
 // Copyright 2022 Brazhnik Dmitry
 
-#include "include\deposit_calculator.h"
-#include "include\deposit_calculator_application.h"
-
 #include <stdio.h>
 #include <stdlib.h>
+
 #include <string>
 #include <algorithm>
 #include <iostream>
@@ -12,6 +10,9 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
+#include "include\deposit_calculator.h"
+#include "include\deposit_calculator_application.h"
 
 std::string Application::getHelp(const std::string& appname) {
     return "This is an application to demonstrate"

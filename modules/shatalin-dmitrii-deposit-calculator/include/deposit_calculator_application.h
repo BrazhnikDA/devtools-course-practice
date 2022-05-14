@@ -3,11 +3,12 @@
 #ifndef MODULES_SHATALIN_DMITRII_DEPOSIT_CALCULATOR_INCLUDE_DEPOSIT_CALCULATOR_APPLICATION_H_
 #define MODULES_SHATALIN_DMITRII_DEPOSIT_CALCULATOR_INCLUDE_DEPOSIT_CALCULATOR_APPLICATION_H_
 
-#include "include/deposit_calculator.h"
-
-#include <string>
 #include <stdio.h>
 #include <stdlib.h>
+
+#include <string>
+
+#include "include/deposit_calculator.h"
 
 class Application {
  private:
