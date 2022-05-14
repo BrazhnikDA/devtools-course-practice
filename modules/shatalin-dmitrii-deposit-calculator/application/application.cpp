@@ -1,8 +1,8 @@
 // Copyright 2022 Brazhnik Dmitry
 
-#include <string>
-
 #include "include/deposit_calculator_application.h"
+
+#include <string>
 
 int main(int argc, const char** argv) {
     Application app;
