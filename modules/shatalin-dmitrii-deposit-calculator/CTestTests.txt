@@ -41,18 +41,9 @@ set_tests_properties (${prefix}_Check_Wrong_Argument_Type PROPERTIES
 
 add_test(
     NAME ${prefix}_Returns_Correct_Index
-    COMMAND ${APPLICATION} 3
+    COMMAND ${APPLICATION} 3 2 5
 )
 
 set_tests_properties (${prefix}_Returns_Correct_Index PROPERTIES
-    PASS_REGULAR_EXPRESSION "1"
-    LABELS "${MODULE}")
-
-add_test(
-    NAME ${prefix}_Returns_Minus_One
-    COMMAND ${APPLICATION} 2
-)
-
-set_tests_properties (${prefix}_Returns_Minus_One PROPERTIES
-    PASS_REGULAR_EXPRESSION "-1"
+    PASS_REGULAR_EXPRESSION "3.3"
     LABELS "${MODULE}")
